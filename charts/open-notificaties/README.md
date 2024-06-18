@@ -11,14 +11,14 @@ The Helm chart installs Open Notificaties and by default the following dependenc
 First configure the Helm repository:
 
 ```bash
-helm repo add open-zaak https://fundaments.github.io/open-zaak-charts/
+helm repo add fundaments-open-zaak https://fundaments.github.io/open-zaak-charts/
 helm repo update
 ```
 
 Install the Helm chart with:
 
 ```bash
-helm install open-notificaties open-zaak/open-notificaties \
+helm install open-notificaties fundaments-open-zaak/open-notificaties \
     --set "settings.allowedHosts=open-notificaties.gemeente.nl" \
     --set "ingress.enabled=true" \
     --set "ingress.hosts={open-notificaties.gemeente.nl}"
@@ -28,7 +28,7 @@ If you want to use your own instance of Redis, Postgres and RabbitMQ instead, yo
 
 ```bash
 
-helm install open-notificaties open-zaak/open-notificaties \
+helm install open-zaak fundaments-open-zaak/open-zaak \
     --set "tags.redis=false" \
     --set "tags.postgresql=false" \
     --set "tags.rabbitmq=false" \
