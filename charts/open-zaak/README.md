@@ -10,7 +10,7 @@ The Helm chart installs Open Zaak and by default the following dependencies usin
 First configure the Helm repository:
 
 ```bash
-helm repo add open-zaak https://open-zaak.github.io/charts/
+helm repo add open-zaak https://fundaments.github.io/open-zaak-charts/
 helm repo update
 ```
 
