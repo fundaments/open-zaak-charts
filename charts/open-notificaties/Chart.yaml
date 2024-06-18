@@ -4,7 +4,7 @@ description: API voor het routeren van notificaties
 
 type: application
 version: 0.8.1
-appVersion: "1.4.0"
+appVersion: "1.6.0"
 
 dependencies:
   - name: postgresql
