@@ -44,6 +44,28 @@ helm install open-zaak fundaments-open-zaak/open-zaak \
 
 :warning: The default settings are unsafe for production usage. Configure proper secrets, enable persistency and consider High Availability (HA) for the database and the application.
 
+:warning: When you uninstall the chart, the PVCs will not be deleted. This can cause confusion during testing.
+
+If you want to use your own instances of Redis, Postgres and RabbitMQ instead, you can disable the subcharts:
+
+```bash
+
+helm install open-notificaties open-zaak/open-notificaties \
+    --set "tags.redis=false" \
+    --set "tags.postgresql=false" \
+    --set "tags.rabbitmq=false" \
+    --set "settings.database.host=postgres.gemeente.nl" \
+    --set "settings.cache.default=redis.gemeente.nl:6379/1" \
+    --set "settings.cache.axes=redis.gemeente.nl:6379/1" \
+    --set "settings.celery.resultBackend=redis.gemeente.nl:6379/2" \
+    --set "settings.messageBroker.host=rabbitmq.gemeente.nl" \
+    --set "settings.allowedHosts=open-notificaties.gemeente.nl" \
+    --set "ingress.enabled=true" \
+    --set "ingress.hosts={open-notificaties.gemeente.nl}"
+```
+
+You will probably need to set more values to configure the connection to your own Redis, Postgres and RabbitMQ instances.
+
 ## Chart and Open Notificaties versions alignment
 
 Not every version of the chart is compatible with every version of Open Notificaties. The
