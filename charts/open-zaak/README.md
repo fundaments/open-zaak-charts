@@ -10,14 +10,14 @@ The Helm chart installs Open Zaak and by default the following dependencies usin
 First configure the Helm repository:
 
 ```bash
-helm repo add open-zaak https://fundaments.github.io/open-zaak-charts/
+helm repo add fundaments-open-zaak https://fundaments.github.io/open-zaak-charts/
 helm repo update
 ```
 
 Install the Helm chart with:
 
 ```bash
-helm install open-zaak open-zaak/open-zaak \
+helm install open-zaak fundaments-open-zaak/open-zaak \
     --set "settings.allowedHosts=open-zaak.gemeente.nl" \
     --set "ingress.enabled=true" \
     --set "ingress.hosts={open-zaak.gemeente.nl}"
@@ -27,7 +27,7 @@ If you want to use your own instance of Redis and Postgres instead, you can disa
 
 ```bash
 
-helm install open-zaak open-zaak/open-zaak \
+helm install open-zaak fundaments-open-zaak/open-zaak \
 --set "tags.redis=false" \
 --set "tags.postgresql=false" \
 --set "settings.database.host=postgres.gemeente.nl" \
