@@ -11,8 +11,8 @@ View the detailed installation instructions and configuration here:
 ### Installation
 Add the Helm repository, update it, get example values files.
 ```bash
-helm repo add fundaments-open-zaak https://fundaments.github.io/open-zaak-charts/
-helm repo update
+helm repo add  fundaments-open-zaak  https://fundaments.github.io/open-zaak-charts/
+helm repo update  fundaments-open-zaak
 wget https://raw.githubusercontent.com/fundaments/open-zaak-charts/main/examples/openzaak_values.yaml
 wget https://raw.githubusercontent.com/fundaments/open-zaak-charts/main/examples/notificaties_values.yaml
 ```
