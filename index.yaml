@@ -2,6 +2,32 @@ apiVersion: v1
 entries:
   open-notificaties:
   - apiVersion: v2
+    appVersion: 1.6.0
+    created: "2024-06-19T13:09:06.261801054Z"
+    dependencies:
+    - name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - postgresql
+      version: ~15.5.5
+    - name: redis
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - redis
+      version: ~19.5.2
+    - name: rabbitmq
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - rabbitmq
+      version: ~14.4.1
+    description: API voor het routeren van notificaties
+    digest: 2d5691b8ede00e01d102022d701103375d764ba69e4d0bafb880350d221008f9
+    name: open-notificaties
+    type: application
+    urls:
+    - https://github.com/fundaments/open-zaak-charts/releases/download/open-notificaties-0.8.2/open-notificaties-0.8.2.tgz
+    version: 0.8.2
+  - apiVersion: v2
     appVersion: 1.4.0
     created: "2024-06-18T08:01:26.474756306Z"
     dependencies:
@@ -236,6 +262,27 @@ entries:
     - https://github.com/open-zaak/charts/releases/download/open-notificaties-0.2.0/open-notificaties-0.2.0.tgz
     version: 0.2.0
   open-zaak:
+  - apiVersion: v2
+    appVersion: 1.12.4
+    created: "2024-06-19T13:09:06.392859563Z"
+    dependencies:
+    - name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - postgresql
+      version: ~15.5.5
+    - name: redis
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - redis
+      version: ~19.5.2
+    description: Productiewaardige API's voor Zaakgericht Werken
+    digest: ea54a9b155132f5f36443fb3da3448813c5434f8c94071619dbbce1c9f9c313d
+    name: open-zaak
+    type: application
+    urls:
+    - https://github.com/fundaments/open-zaak-charts/releases/download/open-zaak-0.8.2/open-zaak-0.8.2.tgz
+    version: 0.8.2
   - apiVersion: v2
     appVersion: 1.7.1
     created: "2024-06-18T08:01:26.614409024Z"
