@@ -101,7 +101,6 @@ persistence:
 existingSecret: null
 
 settings:
-  allowedHosts: open-zaak.gemeente.nl
   useXForwardedHost: false
 
   secretKey: SOME-RANDOM-SECRET
@@ -140,7 +139,8 @@ settings:
 
   debug: false
 
-  extraEnvVars: {}
+  envVars:
+    ALLOWED_HOSTS: open-zaak.gemeente.nl
 
 nginx:
   image:
