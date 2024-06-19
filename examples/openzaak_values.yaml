@@ -1,0 +1,16 @@
+ingress:
+  enabled: true
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+  hosts:
+    - open-zaak.example.com
+  tls:
+    - hosts:
+        - open-zaak.example.com
+      secretName: open-zaak-ingress-tls
+settings:
+  allowedHosts: open-zaak.example.com
+  envVars:
+    DJANGO_SUPERUSER_PASSWORD: appelmoes
+    OPENZAAK_DOMAIN: open-zaak.example.com
+    NOTIF_API_ROOT: http://open-notificaties.open-notificaties.svc.cluster.local/api/v1/
