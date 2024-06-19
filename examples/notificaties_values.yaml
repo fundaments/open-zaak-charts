@@ -1,0 +1,19 @@
+# https://github.com/fundaments/open-zaak-charts/blob/main/charts/open-notificaties/values.yaml
+# flower:
+#   enabled: false
+ingress:
+  enabled: true
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+  hosts:
+    - open-notificaties.example.com
+  tls:
+    - hosts:
+        - open-notificaties.example.com
+      secretName: open-notificaties-ingress-tls
+settings:
+  allowedHosts: open-notificaties.example.com
+  envVars:
+    DJANGO_SUPERUSER_PASSWORD: appelmoes
+    OPENNOTIFICATIES_DOMAIN: open-notificaties.example.com
+    AUTORISATIES_API_ROOT: http://open-zaak.open-zaak.svc.cluster.local/autorisaties/api/v1/
