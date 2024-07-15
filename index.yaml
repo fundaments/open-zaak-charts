@@ -264,6 +264,27 @@ entries:
   open-zaak:
   - apiVersion: v2
     appVersion: 1.12.4
+    created: "2024-07-15T13:17:34.438996699Z"
+    dependencies:
+    - name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - postgresql
+      version: ~15.5.5
+    - name: redis
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - redis
+      version: ~19.5.2
+    description: Productiewaardige API's voor Zaakgericht Werken
+    digest: 0a35b0f60fb31cac5deecd65c2432fc5f60fec620406e65881a565876201789e
+    name: open-zaak
+    type: application
+    urls:
+    - https://github.com/fundaments/open-zaak-charts/releases/download/open-zaak-0.8.3/open-zaak-0.8.3.tgz
+    version: 0.8.3
+  - apiVersion: v2
+    appVersion: 1.12.4
     created: "2024-06-19T13:09:06.392859563Z"
     dependencies:
     - name: postgresql
