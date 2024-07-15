@@ -5,7 +5,7 @@ description: Productiewaardige API's voor Zaakgericht Werken
 type: application
 version: 0.8.4
 # https://github.com/open-zaak/open-zaak/tags
-appVersion: 1.12.5
+appVersion: 1.12.4
 
 dependencies:
   - name: postgresql
